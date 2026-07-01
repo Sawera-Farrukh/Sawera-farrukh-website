@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'GeistMono';
+  src: url('/node_modules/geist/dist/fonts/geist-mono/GeistMono-Variable.woff2') format('woff2');
+  font-weight: 100 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --bg: #0a0a0a;
+    --surface: #111111;
+    --surface-light: #1a1a1a;
+    --border-color: rgba(255,255,255,0.06);
+    --text-primary: #ffffff;
+    --text-secondary: #a1a1aa;
+    --text-muted: #71717a;
+    --accent: #c8aa82;
+    --accent-light: #e8d5b5;
+    --accent-hsl: 34 68% 75%;
+    --status-green: #22c55e;
+
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 34 68% 75%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 7%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 16%;
+    --muted-foreground: 0 0% 85%;
+    --accent-hsl: 34 68% 75%;
+    --accent-foreground: 0 0% 4%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 100% / 0.1;
+    --input: 0 0% 16%;
+    --ring: 34 68% 75%;
+    --radius: 12px;
+  }
+
+  body {
+    @apply bg-[#0a0a0a] text-white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'GeistMono', monospace;
+    font-weight: 400;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .section-padding {
+    padding-top: clamp(60px, 10vh, 120px);
+    padding-bottom: clamp(60px, 10vh, 120px);
+  }
+
+  .container-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .nav-link {
+    position: relative;
+    color: #dadada;
+    font-family: 'GeistMono', monospace;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    padding-bottom: 2px;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: rgba(200, 170, 130, 0.5);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .nav-link:hover {
+    color: #c8aa82;
+  }
+
+  .nav-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  .nav-link-active {
+    color: #c8aa82;
+  }
+
+  .card-hover {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-color: rgba(200, 170, 130, 0.2);
+  }
+
+  .btn-gradient {
+    background: linear-gradient(135deg, #c8aa82 0%, #a08060 100%);
+    color: #0a0a0a;
+    font-family: 'GeistMono', monospace;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+
+  .btn-gradient:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #ffffff;
+    font-family: 'GeistMono', monospace;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 12px 24px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255,255,255,0.15);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+
+  .btn-outline:hover {
+    background: rgba(200, 170, 130, 0.1);
+    border-color: rgba(200, 170, 130, 0.3);
+    color: #c8aa82;
+  }
+
+  .section-label {
+    font-family: 'GeistMono', monospace;
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #c8aa82;
+  }
+
+  .section-heading {
+    font-family: 'GeistMono', monospace;
+    font-weight: 300;
+    font-size: clamp(28px, 3vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    color: #ffffff;
+  }
+
+  .marquee-row {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 16px;
+  }
+
+  .marquee-content {
+    display: flex;
+    gap: 16px;
+    animation: marquee 30s linear infinite;
+    flex-shrink: 0;
+  }
+
+  .marquee-row:hover .marquee-content {
+    animation-play-state: paused;
+  }
+
+  .marquee-reverse .marquee-content {
+    animation-direction: reverse;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(200, 170, 130, 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 8px rgba(200, 170, 130, 0);
+    }
+  }
+
+  .timeline-dot {
+    animation: pulse-dot 2s ease-in-out infinite;
+  }
+
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
