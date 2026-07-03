@@ -444,9 +444,9 @@ export default function HeroLaptop() {
           <rect x="54" y="34" width="388" height="18" fill="rgba(200,170,130,0.08)"/>
 
           <foreignObject x="60" y="38" width="376" height="238">
-            <div xmlns="http://www.w3.org/1999/xhtml" className="font-mono overflow-hidden" style={{ fontSize: 'clamp(7px, 2vw, 11px)', lineHeight: '1.45em', color: '#F0EEF8', height: '100%', paddingTop: '4px' }}>
+            <svg xmlns="http://www.w3.org/1999/xhtml" className="font-mono overflow-hidden" style={{ fontSize: 'clamp(7px, 2vw, 11px)', lineHeight: '1.45em', color: '#F0EEF8', height: '100%', paddingTop: '4px' }}>
               {renderedLines}
-            </div>
+            </svg>
           </foreignObject>
 
           <ellipse cx="460" cy="8" rx="80" ry="60" fill="rgba(200,170,130,0.08)"/>
