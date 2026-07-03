@@ -317,7 +317,8 @@ import HeroLaptop from "../components/HeroLaptop";
 
 export default function Hero() {
   const titleRef = useRef<HTMLDivElement>(null);
-  const [titleWidth, setTitleWidth] = useState<number>(0);
+  // const [titleWidth, setTitleWidth] = useState<number>(0);
+  const [, setTitleWidth] = useState<number>(0);
 
   useEffect(() => {
     const measure = () => {
