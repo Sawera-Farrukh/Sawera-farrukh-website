@@ -447,7 +447,7 @@ export const footerConfig = {
 // ============================================================
 
 export const emailjsConfig = {
-  serviceId: "service_2dyy4wm",
-  templateId: "template_1txe5yn",
-  publicKey: "3lTfn7DnoKaDO6kI8",
+  serviceId: "service_sandbn3",
+  templateId: "template_7zr1mi2",
+  publicKey: "iqBGV2anUaoStsnc6",
 };
