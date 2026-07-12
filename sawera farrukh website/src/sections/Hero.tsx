@@ -339,7 +339,8 @@ export default function Hero() {
     >
       <AmberCascades opacity={1} />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-16">
+      {/* <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 pb-16"> */}
+      <div className="relative z-10 w-full mx-auto px-6 pt-20 pb-16">
         <div className="grid md:grid-cols-12 gap-16 items-center">
 
           {/* Left Content - Shifted slightly to the right */}
