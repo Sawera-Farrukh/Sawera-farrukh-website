@@ -17,6 +17,7 @@ export const navigationConfig = {
     { label: "Skills", href: "/#skills" },
     { label: "Experience", href: "/#experience" },
     { label: "Projects", href: "/projects" },
+    { label: "Resume", href: "/Resume" },
     { label: "Contact", href: "/contact" },
   ],
   ctaText: "Hire Me",
