@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { Toaster } from "sonner";
 import HomePage from "./pages/HomePage";
 import ProjectsPage from "./pages/ProjectsPage";
+import Resume from "./pages/Resume";
 import ContactPage from "./pages/ContactPage";
 // import HeroLaptop from ".components/HeroLaptop";
 
@@ -22,6 +23,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/resume" element={<Resume />}/>
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Toaster
